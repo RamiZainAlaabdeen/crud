@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crud.HelloController">
+   <children>
+      <HBox>
+         <children>
+
+
+            <GridPane alignment="CENTER" hgap="10" vgap="10">
+                <padding>
+                    <Insets bottom="40" left="40" right="40" top="40" />
+                </padding>
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" maxWidth="Infinity" minWidth="100" prefWidth="100" />
+                    <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="200" prefWidth="200" />
+                </columnConstraints>
+
+
+
+                <Label text="ID : " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="Employee_Id" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Name : " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="Employee_Name" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Email : " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="Email" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Salary : " GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <TextField fx:id="Salary" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label text="Bounus : " GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <TextField fx:id="Bounus" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+
+
+                <Button fx:id="Insert" defaultButton="true" onAction="#onButtonClicked"
+                        prefHeight="40" prefWidth="100" text="Insert" GridPane.columnIndex="0" GridPane.columnSpan="1"
+                         GridPane.rowIndex="6" GridPane.rowSpan="1">
+            
+                    >
+
+                    <GridPane.margin>
+                        <Insets bottom="20" left="0" right="0" top="20" />
+                    </GridPane.margin>
+                </Button>
+
+                <Button fx:id="Ubdate" defaultButton="true" onAction="#onButtonClicked"
+                        prefHeight="40" prefWidth="100" text="UBDATE" GridPane.columnIndex="1" GridPane.columnSpan="2"
+                         GridPane.rowIndex="6" GridPane.rowSpan="1">
+
+                    >
+
+                    <GridPane.margin>
+                        <Insets bottom="20" left="0" right="0" top="20" />
+                    </GridPane.margin>
+                </Button>
+
+                <Button fx:id="Delete" defaultButton="true" onAction="#onButtonClicked"
+                        prefHeight="40" prefWidth="100" text="DELETE" GridPane.columnIndex="2" GridPane.columnSpan="3"
+                         GridPane.rowIndex="6" GridPane.rowSpan="1">
+
+                    >
+
+                    <GridPane.margin>
+                        <Insets bottom="20" left="0" right="0" top="20" />
+                    </GridPane.margin>
+                </Button>
+
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+            
+            
+            </GridPane>
+         </children>
+
+          <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
+              <columns>
+                  <TableColumn fx:id="idCol" text="ID">
+                  </TableColumn>
+                  <TableColumn fx:id="nameCol"  text="Name">
+                  </TableColumn>
+                  <TableColumn fx:id="emailCol" text="Email">
+                  </TableColumn>
+                  <TableColumn fx:id="salaryCol" text="Sallary">
+                  </TableColumn>
+                  <TableColumn fx:id="bounusCol" text="Bounus">
+                  </TableColumn>
+              </columns>
+          </TableView>
+      </HBox>
+   </children>
+
+
+</Pane>

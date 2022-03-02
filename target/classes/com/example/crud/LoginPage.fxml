@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="213.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crud.LoginPageController">
+   <children>
+      <Label layoutX="143.0" layoutY="34.0" prefHeight="76.0" prefWidth="213.0" text="Login Page">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="95.0" layoutY="158.0" text="username">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="228.0" text="password">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="username" layoutX="213.0" layoutY="158.0" prefHeight="32.0" prefWidth="175.0" />
+      <TextField fx:id="password" layoutX="213.0" layoutY="228.0" prefHeight="32.0" prefWidth="175.0" />
+      <Button fx:id="loginbtn" layoutX="279.0" layoutY="325.0" mnemonicParsing="false" onAction="#onButtonClicked" text="Login">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="comp" layoutX="213.0" layoutY="281.0" prefWidth="150.0" value="admin">
+
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="user" />
+               <String fx:value="admin" />
+            </FXCollections>
+         </items>
+
+      </ComboBox>
+   </children>
+</AnchorPane>
